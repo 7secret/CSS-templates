@@ -1,0 +1,22 @@
+form {
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+}
+.form-group {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 10px;
+  margin: 20px auto;
+  max-width:240px;
+  &__col {
+    max-width: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    label {
+      padding: 0 15px;
+    }
+  }
+
+}

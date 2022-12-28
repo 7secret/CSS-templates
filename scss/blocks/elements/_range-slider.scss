@@ -1,0 +1,38 @@
+input[type="range"] {
+    max-width: $inputSize;
+    height: 12px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+    border-radius: 10px/100%;
+    height: 7px;
+    max-width: inherit;
+    background-color: $range-slider;
+}
+input[type="range"]::-webkit-slider-thumb {
+    background: $rng-sldr__btn;
+    border-radius: 50%;
+    cursor: pointer;
+    width:13px;
+    height: 13px;
+    -webkit-appearance: none;
+    margin-top: -3px;
+}
+
+input[type="range"]::-moz-range-track {
+    border-radius: 10px/100%;
+    height: 7px;
+    max-width: inherit;
+    background-color: $range-slider;
+}
+input[type="range"]::-moz-range-thumb {
+    background: $rng-sldr__btn;
+    border-radius: 50%;
+    cursor: pointer;
+    width:13px;
+    height: 13px;
+    -webkit-appearance: none;
+    margin-top: -3px;
+}

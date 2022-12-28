@@ -1,0 +1,15 @@
+textarea {
+    width: 200px;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid black;
+    margin: 0 auto;
+    border-radius: 10px/50%;
+    resize: none;
+    box-shadow:  2px 2px 5px black;
+    padding: 0 15px;
+    background-color: $range-slider;
+    &:focus {
+        outline: none; 
+    }
+}

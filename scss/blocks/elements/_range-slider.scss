@@ -4,12 +4,14 @@ input[type="range"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    
 }
 input[type="range"]::-webkit-slider-runnable-track {
     border-radius: 10px/100%;
     height: 7px;
     max-width: inherit;
     background-color: $range-slider;
+    box-shadow: 2px 2px 5px black;
 }
 input[type="range"]::-webkit-slider-thumb {
     background: $rng-sldr__btn;

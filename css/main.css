@@ -120,12 +120,14 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: black;
+  overflow: hidden;
 }
 
 form {
   text-align: center;
   font-family: "Indie Flower", cursive;
   color: #fff;
+  text-shadow: 5px 5px 5px black;
 }
 
 .form-group {
@@ -159,6 +161,8 @@ form {
   background-color: rgba(165, 177, 209, 0.2);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+  -webkit-animation: emergenceForm 0.5s ease-in-out 0.3s 1 alternate forwards;
+          animation: emergenceForm 0.5s ease-in-out 0.3s 1 alternate forwards;
 }
 .container__title {
   -webkit-box-sizing: border-box;
@@ -169,6 +173,7 @@ form {
   font-size: 35px;
   font-weight: 700;
   color: #fff;
+  text-shadow: 5px 5px 5px black;
   padding: 0px 5px;
 }
 
@@ -265,6 +270,22 @@ form {
             transform: translateX(0px);
   }
 }
+@-webkit-keyframes emergenceForm {
+  0% {
+    margin-top: -1500px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+@keyframes emergenceForm {
+  0% {
+    margin-top: -1500px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
 input[type=range] {
   max-width: 100px;
   height: 12px;
@@ -278,6 +299,8 @@ input[type=range]::-webkit-slider-runnable-track {
   height: 7px;
   max-width: inherit;
   background-color: rgba(99, 103, 219, 0.55);
+  -webkit-box-shadow: 2px 2px 5px black;
+          box-shadow: 2px 2px 5px black;
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -366,14 +389,20 @@ textarea:focus {
 }
 
 #result {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   background-color: rgba(99, 103, 219, 0.55);
   margin: 0 auto;
   margin-bottom: 30px;
 }
 
+#result2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
 .arrow-left, .arrow-right {
+  opacity: 0;
   position: absolute;
   width: 100px;
   height: 100px;
@@ -382,9 +411,31 @@ textarea:focus {
   -webkit-transform: rotate(45deg); /* Для Safari, Chrome, iOS */ /* Для Opera */
   transform: rotate(45deg);
   cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-animation: emergenceArrows 1s ease-in-out 0.6s 1 alternate forwards;
+          animation: emergenceArrows 1s ease-in-out 0.6s 1 alternate forwards;
 }
 
 .arrow-left:hover, .arrow-right:hover {
   -webkit-box-shadow: inset 5px 4px 4px rgba(0, 0, 0, 0.5);
           box-shadow: inset 5px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+@-webkit-keyframes emergenceArrows {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes emergenceArrows {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

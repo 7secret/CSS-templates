@@ -13,8 +13,10 @@
       font-size: 35px;
       font-weight: 700;
       color: #fff;
+      text-shadow: 5px 5px 5px black;
       padding: 0px 5px;
     }
+  animation: emergenceForm .5s ease-in-out .3s 1 alternate forwards
 }
 
 .container.active {
@@ -55,5 +57,14 @@
   }
   100% {
     transform: translateX(0px);
+  }
+}
+
+@keyframes emergenceForm {
+  0% {
+    margin-top: -1500px;
+  }
+  100% {
+    margin-top: 0;
   }
 }

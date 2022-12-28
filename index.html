@@ -11,16 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="arrow-left"></div>
+    <div class="arrow-right"></div>
+
     <div class="container active">
         <h1 class="container__title">Box-shadow generator</h1>
-
         <form>
-
-            
             <label style="margin-right: 10px;" for="inset">Shadow inside an element?</label>
             <input type="checkbox" id="inset" checked>
-            
             <div class="form-group">
                 <div class="form-group__col">
                     <label for="offsetX">Horizontal offset</label>
@@ -47,16 +45,40 @@
                     <input type="range" id="opacity" min="0" max="1" step="0.01" value="0.5">
                 </div>
             </div>
-
             <div id="result"></div>
             <textarea id="cssCode" readonly></textarea>
+        </form>
+    </div>
 
+    <div class="container">
+        <h1 class="container__title">Text-shadow generator</h1>
+        <form>
+            <div class="form-group">
+                <div class="form-group__col">
+                    <label for="offsetX2">Horizontal offset</label>
+                    <input type="range" id="offsetX2" min="-50" max="50" value="0" step="1">
+                </div>
+                <div class="form-group__col">
+                    <label for="offsetY">Vertical offset</label>
+                    <input type="range" id="offsetY2" min="-50" max="50" value="0" step="1">
+                </div>
+                <div class="form-group__col">
+                    <label for="blur2">Blur</label>
+                    <input type="range" id="blur2" min="0" max="25" step="1" value="8">
+                </div>
+                <div class="form-group__col">
+                    <label for="color2">Color</label>
+                    <input type="color" id="color2">
+                </div>
+            </div>
+            <div><p id="result2">Text</p></div>
+            <textarea id="cssCode2" readonly></textarea>
         </form>
     </div>
 
 
-
-
-    <script async src="./js/box-shadow.js"></script>
+    <script src="./js/box-shadow.js"></script>
+    <script src="./js/arrow.js"></script>
+    <script src="./js/text-shadow.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*reset*/
 * {
   padding: 0px;
@@ -10,6 +11,14 @@
 *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+*::-moz-selection {
+  background-color: rgb(58, 88, 199);
+}
+
+*::selection {
+  background-color: rgb(58, 88, 199);
 }
 
 :focus,
@@ -98,6 +107,7 @@ legend {
 }
 
 body {
+  position: relative;
   width: 100%;
   height: 100vh;
   display: -webkit-box;
@@ -109,11 +119,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: black;
 }
 
 form {
   text-align: center;
   font-family: "Indie Flower", cursive;
+  color: #fff;
 }
 
 .form-group {
@@ -144,20 +156,115 @@ form {
 .container {
   display: none;
   max-width: 400px;
-  padding: 0px 15px;
+  background-color: rgba(165, 177, 209, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 .container__title {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   max-width: inherit;
   text-align: center;
   margin-bottom: 35px;
   font-size: 35px;
   font-weight: 700;
+  color: #fff;
+  padding: 0px 5px;
 }
 
 .container.active {
   display: block;
 }
 
+@-webkit-keyframes slideLeft {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  25% {
+    -webkit-transform: translateX(-600px);
+            transform: translateX(-600px);
+  }
+  50% {
+    -webkit-transform: translateX(-9999px);
+            transform: translateX(-9999px);
+  }
+  75% {
+    -webkit-transform: translateX(600px);
+            transform: translateX(600px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  25% {
+    -webkit-transform: translateX(-600px);
+            transform: translateX(-600px);
+  }
+  50% {
+    -webkit-transform: translateX(-9999px);
+            transform: translateX(-9999px);
+  }
+  75% {
+    -webkit-transform: translateX(600px);
+            transform: translateX(600px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+@-webkit-keyframes slideRight {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  25% {
+    -webkit-transform: translateX(600px);
+            transform: translateX(600px);
+  }
+  50% {
+    -webkit-transform: translateX(9999px);
+            transform: translateX(9999px);
+  }
+  75% {
+    -webkit-transform: translateX(-600px);
+            transform: translateX(-600px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+@keyframes slideRight {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  25% {
+    -webkit-transform: translateX(600px);
+            transform: translateX(600px);
+  }
+  50% {
+    -webkit-transform: translateX(9999px);
+            transform: translateX(9999px);
+  }
+  75% {
+    -webkit-transform: translateX(-600px);
+            transform: translateX(-600px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
 input[type=range] {
   max-width: 100px;
   height: 12px;
@@ -258,18 +365,26 @@ textarea:focus {
   outline: none;
 }
 
-*::-moz-selection {
-  background-color: rgb(58, 88, 199);
-}
-
-*::selection {
-  background-color: rgb(58, 88, 199);
-}
-
 #result {
   width: 30px;
   height: 30px;
   background-color: rgba(99, 103, 219, 0.55);
   margin: 0 auto;
   margin-bottom: 30px;
+}
+
+.arrow-left, .arrow-right {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #fff;
+  background-color: rgb(58, 88, 199); /* Для Firefox */ /* Для IE */
+  -webkit-transform: rotate(45deg); /* Для Safari, Chrome, iOS */ /* Для Opera */
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.arrow-left:hover, .arrow-right:hover {
+  -webkit-box-shadow: inset 5px 4px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 5px 4px 4px rgba(0, 0, 0, 0.5);
 }

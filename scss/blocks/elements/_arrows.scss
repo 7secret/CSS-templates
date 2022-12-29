@@ -1,8 +1,8 @@
 .arrow-left, .arrow-right {
     opacity: 0;
     position: absolute;
-    width: 100px;
-    height:100px;
+    width: 200px;
+    height:200px;
     border: 1px solid #fff;
     background-color: $rng-sldr__btn;
     -moz-transform: rotate(45deg); /* Для Firefox */

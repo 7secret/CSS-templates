@@ -1,11 +1,12 @@
-#result {
-    width: 40px;
-    height:40px;
+#result, #result2 {
+    width: 80px;
+    height:80px;
     background-color: $range-slider;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 #result2 {
-    font-size: 20px;
+    font-size: 40px;
     margin-bottom: 20px;
+    background-color: transparent;
 }

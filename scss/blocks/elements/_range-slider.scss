@@ -1,15 +1,15 @@
 input[type="range"] {
-    max-width: $inputSize;
-    height: 12px;
+    width: $inputSize;
+    height: 30px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     
 }
 input[type="range"]::-webkit-slider-runnable-track {
-    border-radius: 10px/100%;
-    height: 7px;
-    max-width: inherit;
+    border-radius: 15px/100%;
+    height: 13px;
+    width: inherit;
     background-color: $range-slider;
     box-shadow: 2px 2px 5px black;
 }
@@ -17,16 +17,16 @@ input[type="range"]::-webkit-slider-thumb {
     background: $rng-sldr__btn;
     border-radius: 50%;
     cursor: pointer;
-    width:13px;
-    height: 13px;
+    width:25px;
+    height: 25px;
     -webkit-appearance: none;
-    margin-top: -3px;
+    margin-top: -5px;
 }
 
 input[type="range"]::-moz-range-track {
     border-radius: 10px/100%;
-    height: 7px;
-    max-width: inherit;
+    height: 13px;
+    width: inherit;
     background-color: $range-slider;
 }
 input[type="range"]::-moz-range-thumb {

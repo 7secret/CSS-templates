@@ -4,25 +4,13 @@ let rightArrow = document.querySelector('.arrow-right');
 
 
 for (let mainForm of mainForms) {
-    if (mainForm.closest('.active') && document.documentElement.offsetWidth > 586) {
+    if (mainForm.closest('.active')) {
         let leftX = mainForm.offsetLeft - leftArrow.offsetWidth / 2;
         let rightX = mainForm.offsetLeft + mainForm.offsetWidth - leftArrow.offsetWidth / 2;
         leftArrow.style.left = leftX + 'px';
         rightArrow.style.left = rightX + 'px';
         break;
     }
-    else if (mainForm.closest('.active')) {
-        let leftX = mainForm.offsetLeft + 15;
-        let rightX = mainForm.offsetLeft + mainForm.offsetWidth - rightArrow.offsetWidth - 15;
-
-        let title = document.querySelector('.container__title');
-        let leftY = title.getBoundingClientRect().top;
-        leftArrow.style.left = leftX + 'px';
-        leftArrow.style.top = leftY + title.offsetHeight / 2 + 'px';
-        rightArrow.style.left = rightX + 'px';
-        rightArrow.style.top = leftY + title.offsetHeight / 2 + 'px';
-        break;
-    } 
 }
     
 let index = 0;
